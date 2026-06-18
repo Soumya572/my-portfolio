@@ -41,7 +41,7 @@ const Portfolio = () => {
             description: 'A responsive, real-time communication platform capable of handling text and rich media messaging.',
             challenge: 'Architected efficient database handling for rapid messaging utilizing MongoDB for document storage, while integrating the Cloudinary API to optimize and serve user-generated images and videos without server bottlenecking.',
             tags: ['MongoDB', 'Cloudinary', 'Real-Time Sync'],
-            link: 'https://github.com/Soumya572/waether-app/tree/main'
+            link: 'https://chat-app-nine-nu-66.vercel.app/login'
         }
     ];
 
@@ -222,7 +222,7 @@ const Portfolio = () => {
                         variants={itemVariants}
                         className={`text-xl max-w-2xl mb-10 leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
                     >
-                        Hi, I'm a Web & Mobile Developer specializing in full-stack environments, asynchronous APIs, and real-time data management.
+                        Hi, I'm a Web & Mobile Developer primarily using C++ and specializing in full-stack environments, asynchronous APIs, and real-time data management.
                     </motion.p>
 
                     <motion.div
@@ -350,7 +350,7 @@ const Portfolio = () => {
                     <div className="flex-1 text-center md:text-left w-full">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                         <p className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            I am a dedicated Web & Mobile Development student passionate about solving complex technical challenges. From managing stateful front-end applications to architecting efficient back-end media storage solutions, I focus on writing clean, scalable code that delivers seamless user experiences. When I'm not coding, I'm exploring new frameworks and finding ways to optimize application performance.
+                            I am a dedicated C++ and Web & Mobile Development student passionate about solving complex technical challenges. From managing stateful front-end applications to architecting efficient back-end media storage solutions, I focus on writing clean, scalable code that delivers seamless user experiences. When I'm not coding, I'm exploring new frameworks and finding ways to optimize application performance.
                         </p>
 
                         {/* Skills Grid */}
@@ -361,7 +361,7 @@ const Portfolio = () => {
                             transition={{ delay: 0.2, staggerChildren: 0.1 }}
                             viewport={{ once: true }}
                         >
-                            {['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'JavaScript', 'REST APIs', 'Git', 'Web Design'].map((skill) => (
+                            {['C++', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'JavaScript', 'REST APIs', 'Git', 'Web Design'].map((skill) => (
                                 <motion.div
                                     key={skill}
                                     whileHover={{ scale: 1.05 }}
@@ -508,7 +508,7 @@ const Portfolio = () => {
                             rel="noopener noreferrer"
                             className="inline-block mt-6 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-purple-600 transition-all"
                         >
-                            View on GitHub
+                            {selectedProject.link.includes('github.com') ? 'View on GitHub' : 'View Live Demo'}
                         </motion.a>
                     </motion.div>
                 </motion.div>
