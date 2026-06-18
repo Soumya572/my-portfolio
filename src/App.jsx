@@ -41,7 +41,7 @@ const Portfolio = () => {
             description: 'A responsive, real-time communication platform capable of handling text and rich media messaging.',
             challenge: 'Architected efficient database handling for rapid messaging utilizing MongoDB for document storage, while integrating the Cloudinary API to optimize and serve user-generated images and videos without server bottlenecking.',
             tags: ['MongoDB', 'Cloudinary', 'Real-Time Sync'],
-            link: 'https://chat-app-nine-nu-66.vercel.app/login'
+            link: 'https://chat-app-nine-nu-66.vercel.app'
         }
     ];
 
@@ -100,12 +100,12 @@ const Portfolio = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6 }}
                 className={`fixed w-full top-0 z-50 p-6 transition-all duration-300 backdrop-blur-md ${scrolled
-                        ? isDarkMode
-                            ? 'bg-gray-800/80 shadow-xl'
-                            : 'bg-white/80 shadow-lg'
-                        : isDarkMode
-                            ? 'bg-gray-900/50'
-                            : 'bg-transparent'
+                    ? isDarkMode
+                        ? 'bg-gray-800/80 shadow-xl'
+                        : 'bg-white/80 shadow-lg'
+                    : isDarkMode
+                        ? 'bg-gray-900/50'
+                        : 'bg-transparent'
                     }`}
             >
                 <div className="flex justify-between items-center max-w-5xl mx-auto">
@@ -348,9 +348,34 @@ const Portfolio = () => {
                     className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center"
                 >
                     <div className="flex-1 text-center md:text-left w-full">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">About Me</h2>
+                        <p className={`text-lg leading-relaxed mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            I am a dedicated developer who thrives at the intersection of logic and creativity, specializing in building robust, interactive web applications. Guided by hard work, resilience, and a deep commitment to problem-solving, I focus on turning complex technical challenges into clean, scalable code.
+                        </p>
+
+                        <div className="grid sm:grid-cols-2 gap-4 mb-6 text-left">
+                            <div className={`p-5 rounded-xl border transition-all hover:shadow-md ${isDarkMode ? 'bg-gray-800/40 border-purple-500/20' : 'bg-purple-50/50 border-purple-100'}`}>
+                                <h3 className="font-bold text-purple-600 dark:text-purple-400 text-lg mb-1 flex items-center gap-2">
+                                    <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                                    Real-Time MERN Chat App
+                                </h3>
+                                <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                                    A responsive communication platform leveraging Socket.IO for instant, low-latency messaging and media sharing.
+                                </p>
+                            </div>
+                            <div className={`p-5 rounded-xl border transition-all hover:shadow-md ${isDarkMode ? 'bg-gray-800/40 border-purple-500/20' : 'bg-purple-50/50 border-purple-100'}`}>
+                                <h3 className="font-bold text-purple-600 dark:text-purple-400 text-lg mb-1 flex items-center gap-2">
+                                    <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                                    React Weather Dashboard
+                                </h3>
+                                <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                                    An intuitive application integrating geolocation APIs and asynchronous data flows to provide real-time weather analytics.
+                                </p>
+                            </div>
+                        </div>
+
                         <p className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            I am a dedicated C++ and Web & Mobile Development student passionate about solving complex technical challenges. From managing stateful front-end applications to architecting efficient back-end media storage solutions, I focus on writing clean, scalable code that delivers seamless user experiences. When I'm not coding, I'm exploring new frameworks and finding ways to optimize application performance.
+                            Whether designing database schemas or optimizing frontend layouts, I bring dedication and attention to detail to every project. I’m always eager to collaborate with peers and connect with recruiters. Explore my projects below, and let’s connect to build something meaningful together!
                         </p>
 
                         {/* Skills Grid */}
@@ -373,7 +398,7 @@ const Portfolio = () => {
                         </motion.div>
                     </div>
 
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
@@ -382,15 +407,15 @@ const Portfolio = () => {
                     >
                         <div className={`relative overflow-hidden shadow-xl md:shadow-2xl border-4 ${isDarkMode ? 'border-gray-700' : 'border-white'} w-48 h-48 rounded-full md:w-full md:h-auto md:max-w-sm md:rounded-2xl shrink-0`}>
                             {/* Mobile Profile Image */}
-                            <img 
-                                src="/profile-mobile.jpg" 
-                                alt="Soumya Maurya Profile" 
+                            <img
+                                src="/profile-mobile.jpg"
+                                alt="Soumya Maurya Profile"
                                 className="w-full h-full object-cover block md:hidden"
                             />
                             {/* Desktop Profile Image */}
-                            <img 
-                                src="/profile.jpg" 
-                                alt="Soumya Maurya Profile" 
+                            <img
+                                src="/profile.jpg"
+                                alt="Soumya Maurya Profile"
                                 className="w-full h-auto object-cover hidden md:block"
                             />
                             <div className="absolute inset-0 bg-purple-500/10 mix-blend-overlay"></div>
