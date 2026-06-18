@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Menu, X, ChevronDown, Moon, Sun, Code2 } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, Menu, X, ChevronDown, Moon, Sun, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ContactForm from './components/ContactForm';
 
 const Portfolio = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -426,26 +425,23 @@ const Portfolio = () => {
 
             {/* Contact Section */}
             <footer id="contact" className={`py-16 md:py-24 transition-colors duration-300 ${isDarkMode ? 'bg-gray-800/80 backdrop-blur-sm' : 'bg-gradient-to-b from-purple-600/10 to-gray-100 backdrop-blur-sm'}`}>
-                <div className="max-w-5xl mx-auto px-6">
+                <div className="max-w-5xl mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-center mb-12"
+                        className="mb-8"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's build something together.</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">Get In Touch</h2>
                         <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+                            I am always open to discussing new projects, creative ideas, or opportunities. Feel free to connect with me on any of these platforms!
                         </p>
                     </motion.div>
 
-                    {/* Contact Form */}
-                    <ContactForm isDarkMode={isDarkMode} />
-
                     {/* Social Links */}
                     <motion.div
-                        className={`flex justify-center gap-4 md:gap-6 mt-12 pt-8 border-t ${isDarkMode ? 'border-gray-600' : 'border-purple-200'}`}
+                        className="flex justify-center gap-6 mt-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -477,13 +473,6 @@ const Portfolio = () => {
                             className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'}`}
                         >
                             <Code2 size={32} />
-                        </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.2, y: -5 }}
-                            href="mailto:your.email@example.com"
-                            className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'}`}
-                        >
-                            <Mail size={32} />
                         </motion.a>
                     </motion.div>
 
