@@ -222,7 +222,7 @@ const Portfolio = () => {
                         variants={itemVariants}
                         className={`text-xl max-w-2xl mb-10 leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
                     >
-                        Hi, I'm a Web & Mobile Developer primarily using C++ and specializing in full-stack environments, asynchronous APIs, and real-time data management.
+                        Hi, I'm a Web & Mobile Developer specializing in full-stack environments, asynchronous APIs, and real-time data management.
                     </motion.p>
 
                     <motion.div
